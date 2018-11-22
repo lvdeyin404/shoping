@@ -1,0 +1,150 @@
+<!--pages/list/list.wxml  首页-->
+<!-- banner部分 -->
+<view class='banner'>
+  <swiper indicator-dots="true" autoplay="true" interval="5000" duration="500">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<!-- 互动区 -->
+<view class='action'>
+  <view class='action-item'>
+    <span class="iconfont icon-tixing" style="color:#FA8A76"></span>
+    <navigator url='./newluck/newluck'><text class='action-item-text'>最新揭晓</text></navigator>
+  </view>
+  <view class='action-item'>
+    <span class="iconfont icon-xiangji" style="color:#F2B25C"></span>
+    <text class='action-item-text'>晒单</text>
+  </view>
+  <view class='action-item'>
+    <span class="iconfont icon-lipin" style="color:#5FDA9E"></span>
+    <navigator url='./myluck/myluck'><text class='action-item-text'>我的抽奖</text></navigator>
+  </view>
+  <view class='action-item'>
+    <span class="iconfont icon-xinxi" style="color:#61B2E1"></span>
+    <text class='action-item-text'>帮助</text>
+  </view>
+</view>
+
+<!-- 公告 -->
+<view class='notice'>
+  <swiper autoplay="true" interval="5000" duration="500">
+    <swiper-item>
+      <view class='notice'>
+        <span class="iconfont icon-shengyin notice-icon"></span>
+        <span class="notice-text">
+          欢迎各位来到迷你商城
+        </span>
+        <span class="iconfont icon-jiantou jiantou"></span>
+      </view>
+    </swiper-item>
+    <block wx:for="{{noticelists}}">
+      <swiper-item>
+        <navigator url='./newluck/newluck'>
+        <view class='notice'>
+          <span class="iconfont icon-shengyin notice-icon"></span>
+          <span class="notice-text">
+            恭喜<text>{{item['username']}}</text>获得<text>{{item['productname']}}</text>
+          </span>
+          <span class="iconfont icon-jiantou jiantou"></span>
+        </view>
+        </navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<!-- <view class='notice'>
+  <span class="iconfont icon-shengyin notice-icon"></span>
+  <span class="notice-text">
+    恭喜xxx获得<text class="notice-goods">高清电视一台</text>
+  </span>
+  <span class="iconfont icon-jiantou jiantou"></span>
+</view> -->
+<!-- 公告结束 -->
+
+<!-- 商品模块 -->
+<view class='content'>
+  <view class='content-title'>
+    <span bindtap='bindhot' style="{{border1}}">人气</span>
+    <span bindtap='bindspedd' style="{{border2}}">进度</span>
+    <span bindtap='bindtotal' style="{{border3}}">需要人次</span>
+    <span bindtap='bindall' style="{{border4}}">全部</span>
+  </view>
+  <view class='content-goods'>
+    <block wx:for='{{LockData}}'>
+      <view class='goods-item' style='border-right:solid 1rpx #F7F7F7'>
+        <navigator url='./list-item/list-item?lockid={{item.lockid}}'>
+          <view class='goods-img'>
+            <image src="{{item.product[0]['Imagepath']}}"></image>
+          </view>
+          <view class='goods-title'>{{item.product[0]['ProductName']}}</view>
+        </navigator>
+        <view class='speed'>
+          <view class='speed-item'style="width:{{item.width}}%"></view>
+        </view>
+        <view class='add'>
+          <span class="item-text">还需<text>{{item.totalnumber - item.nownumber}}</text>人次</span>
+          <span class="addlink">立即参与</span>
+        </view>
+      </view>
+    </block>
+    <!-- <view class='goods-item' style='border-right:solid 1rpx #F7F7F7'>
+      <navigator url='./list-item/list-item'>
+        <view class='goods-img'>
+          <image src='http://119.29.242.21/images/phone.jpg'></image>
+        </view>
+        <view class='goods-title'>华为AI智能手机</view>
+      </navigator>
+      <view class='speed'>
+        <view class='speed-item'style="width:20%"></view>
+      </view>
+      <view class='add'>
+        <span class="item-text">还需<text>332</text>人次</span>
+        <span class="addlink">立即参与</span>
+      </view>
+    </view>
+    <view class='goods-item'>
+      <view class='goods-img'>
+        <image src='http://119.29.242.21/images/phone.jpg'></image>
+      </view>
+      <view class='goods-title'>华为AI智能手机</view>
+      <view class='speed'>
+        <view class='speed-item'style="width:20%"></view>
+      </view>
+      <view class='add'>
+        <span class="item-text">还需<text>332</text>人次</span>
+        <span class="addlink">立即参与</span>
+      </view>
+    </view>
+    <view class='goods-item' style='border-right:solid 1rpx #F7F7F7'>
+      <view class='goods-img'>
+        <image src='http://119.29.242.21/images/phone.jpg'></image>
+      </view>
+      <view class='goods-title'>华为AI智能手机</view>
+      <view class='speed'>
+        <view class='speed-item'style="width:20%"></view>
+      </view>
+      <view class='add'>
+        <span class="item-text">还需<text>332</text>人次</span>
+        <span class="addlink">立即参与</span>
+      </view>
+    </view>
+    <view class='goods-item'>
+      <view class='goods-img'>
+        <image src='http://119.29.242.21/images/phone.jpg'></image>
+      </view>
+      <view class='goods-title'>华为AI智能手机</view>
+      <view class='speed'>
+        <view class='speed-item'style="width:20%"></view>
+      </view>
+      <view class='add'>
+        <span class="item-text">还需<text>332</text>人次</span>
+        <span class="addlink">立即参与</span>
+      </view>
+    </view> -->
+  </view>
+</view>

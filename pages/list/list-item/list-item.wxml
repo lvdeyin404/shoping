@@ -1,0 +1,60 @@
+<!--pages/list/list-item/list-item.wxml 抽奖物品详情页-->
+<view class='box'>
+  <!-- banner图片展示 -->
+  <view class='banner'>
+    <swiper indicator-dots="true" autoplay="true" interval="5000" duration="500">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class='middle'>
+    <view class='middle-title'>
+      <span class='title-text'>{{LockData[0].product[0].ProductName}}</span>
+      <span class='title-status' wx:if='{{LockData[0].product[0].Status}} == 1'>进行中</span>
+      <span class='title-status' wx:else>已结束</span>
+    </view>
+    <view class='middle-duction'>
+      {{LockData[0].product[0].Text}}
+    </view>
+    <view class='time'>期号:
+      <text>{{LockData[0].addtime}}</text>
+    </view>
+    <view class='people-number'>
+      <span class="people-one">总需人数:
+        <text>{{LockData[0].totalnumber}}</text>
+      </span>
+      <span class="people-two">剩余人次:
+        <text>{{LockData[0].totalnumber - LockData[0].nownumber}}</text>
+      </span>
+    </view>
+    <view class='speed'>
+      <view class='speed-item' style='width:{{LockData[0].width}}%'></view>
+    </view>
+    <view class='is_status' wx:if="{{LockData.is_join}}">您已成功参加此次活动</view>
+    <view class='is_status' wx:else>您未参加此次活动</view>
+  </view>
+
+  <!-- 底部固定 -->
+  <view class='fix' wx:if="{{LockData.is_join}}" style='background:#EAEAEA'>
+    参与抽奖
+  </view>
+  <view class='fix' wx:else bindtap='bindjoin' data-userid='{{LockData.userid}}' data-lockid="{{LockData[0]['lockid']}}">
+    参与抽奖
+  </view>
+  
+
+  <!-- 详情 -->
+  <view class='buttom'>
+    <view class='muan1'>图文详情
+      <span> > </span>
+    </view>
+    <view class='muan2'>往期揭晓
+      <span> > </span>
+    </view>
+  </view>
+
+</view>

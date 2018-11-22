@@ -1,0 +1,29 @@
+<!--pages/list/myluck/myluck.wxml  我的抽奖-->
+<view class='box'>
+  <view class='title'>
+    <span style="{{border1}}" bindtap="bindspan1">全部</span>
+    <span style="{{border2}}" bindtap="bindspan2">已中奖</span>
+    <span style="{{border3}}" bindtap="bindspan3">未中奖</span>
+    <span style="{{border4}}" bindtap="bindspan4">未开奖</span>
+  </view>
+  <view class='content'>
+    <block wx:for='{{myluck}}'>
+      <view class='content-item'>
+        <view class='content-left'>
+          <image src="{{item['product'][0]['Imagepath']}}" />
+        </view>
+        <view class='content-right'>
+          <navigator url="../list-item/list-item?lockid={{item['LockId']}}">
+          <view class='rightbox'>
+            <view class='phonename'>{{item['product'][0]['ProductName']}}</view>
+            <view class='number'>期号:<text>{{item['product'][0]['AddTime']}}</text></view>
+          </view>
+          </navigator>
+          <view class='isluck' wx:if="{{item['is_open'] == 0}}" >未开奖</view>
+          <view class='isluck' wx:elif="{{item['is_luck']  == 1}}">已中奖</view>
+          <view class='isluck' wx:elif="{{item['is_luck']  == 2}}">未中奖</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

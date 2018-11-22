@@ -1,0 +1,10 @@
+<!--pages/list/newluck/newluck.wxml 最新揭晓-->
+<view class='box'>
+  <view class='content'>
+    <block wx:for="{{noticelists}}">
+      <view class='content-item'>
+        恭喜<text>{{item['username']}}</text>获得<text>{{item['productname']}}</text>一台
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,88 @@
+<!--pages/goods/goods.wxml-->
+<view class='box'>
+  <!-- 顶部搜索框 -->
+  <view class='top-all'>
+    <view class='search'>
+      <icon type='search' size='18px;'></icon>
+      <text>搜索商品或店铺</text>
+    </view>
+    <view class='iconfont icon-duihuaxinxi message'>
+      <view class='dian'></view>
+    </view>
+  </view>
+
+  <!-- banner部分 -->
+  <view class='banner'>
+    <swiper indicator-dots="true" autoplay="true" interval="5000" duration="500">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="355" height="150"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!-- 菜单 -->
+  <view class='action'>
+    <view class='action-item'>
+      <span class="iconfont icon-liwu" style="color:#FA8A76"></span>
+      <text class='action-item-text'>优品汇</text>
+    </view>
+    <view class='action-item'>
+      <span class="iconfont icon-xiangji" style="color:#F2B25C"></span>
+      <text class='action-item-text'>品牌街</text>
+    </view>
+    <view class='action-item'>
+      <span class="iconfont icon-zuanshi" style="color:#5FDA9E"></span>
+      <text class='action-item-text'>充钻石</text>
+    </view>
+    <view class='action-item'>
+      <span class="iconfont icon-fenleiorguangchangorqita" style="color:#61B2E1"></span>
+      <text class='action-item-text'>分类</text>
+    </view>
+  </view>
+
+  <!-- 商品 -->
+  <view class='content'>
+    <view class="content-left">
+      <view class="title">限时抢购</view>
+        <view class="x-title">精挑细选 超值让利</view>
+        <view class="time" wx:if="{{!is_title}}">
+          <span>{{countDownDay}}</span>
+          <text style='font-size:30rpx;'>天</text>
+          <span>{{countDownHour}}</span>
+          <text style='font-size:30rpx;'>时</text>
+          <span>{{countDownMinute}}</span>
+          <text style='font-size:30rpx;'>分</text>
+          <span>{{countDownSecond}}</span>
+          <text style='font-size:30rpx;'>秒</text>
+        </view>
+        <view class="time" wx:else>
+          <span>{{title}}</span>
+        </view>
+      <view class="img">
+        <image src="{{limitgoods['product']['Imagepath']}}" style='width:100%;height:350rpx'/>
+      </view>
+    </view>
+    <view class='content-right'>
+      <view class='right-top'>
+        <view class='left'>
+          <view class="title">新品推荐</view>
+          <view class="x-title">好货一箩筐</view>
+        </view>
+        <view class='right'>
+          <image src="{{newPro['Imagepath']}}" style='height:80%;width:100%'/>
+        </view>
+      </view>
+      <view class='right-buttom'>
+        <view class='left'>
+            <view class="title">一周热卖</view>
+            <view class="x-title">全民疯抢中</view>
+          </view>
+          <view class='right'>
+            <image src="{{weekHot['Imagepath']}}" style='height:80%;width:100%'/>
+          </view>
+        </view>
+    </view>
+  </view>
+</view>

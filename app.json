@@ -1,0 +1,50 @@
+{
+  "pages":[
+    "pages/order/order",
+    "pages/list/list",
+    "pages/list/myluck/myluck",
+    "pages/list/newluck/newluck",
+    "pages/user/user",
+
+    "pages/cart/cart",
+    "pages/goods/goods",
+    "pages/list/list-item/list-item",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"white",
+    "navigationBarBackgroundColor": "#333",
+    "navigationBarTitleText": "迷你商城",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "selectedColor": "#FA5858",
+    "list": [
+      {
+        "pagePath": "pages/list/list",
+        "iconPath": "img/icon_home.png",
+        "selectedIconPath": "img/icon_home_selected.png",
+        "text": "抽奖"
+      },
+      {
+        "pagePath": "pages/goods/goods",
+        "iconPath": "img/icon_cate.png",
+        "selectedIconPath": "img/icon_cate_selected.png",
+        "text": "精选"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "iconPath": "img/icon_cart.png",
+        "selectedIconPath": "img/icon_cart_selected.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "img/icon_member.png",
+        "selectedIconPath": "img/icon_member_selected.png",
+        "text": "我"
+      }
+    ]
+  }
+}

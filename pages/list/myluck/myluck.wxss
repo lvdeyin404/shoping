@@ -1,0 +1,76 @@
+/* pages/list/myluck/myluck.wxss */
+body html{
+  height: 100%;
+  width: 100%;
+}
+
+.box{
+  background: #EAEAEA;
+  height: 100%;
+  width: 100%;
+}
+
+.title{
+  background: #ffffff;
+  width: 100%;
+  height: 80rpx;
+}
+.title span{
+  font-size: 30rpx;
+  padding: 13rpx 0;
+  margin-left: 11%;
+  width: 35%;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.content{
+  height: 100%;
+  width: 100%;
+}
+.content .content-item{
+  border-radius: 5px;
+  background: #ffffff;
+  margin: 10rpx auto;
+  height: 170rpx;
+  width: 95%;
+}
+.content .content-item .content-left{
+  height: 100%;
+  width: 30%;
+  float: left;
+}
+.content .content-item .content-left image{
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+}
+
+.content .content-item .content-right{
+  height: 100%;
+  width: 70%;
+  float: left;
+}
+.content .content-item .rightbox{
+  float: left;
+  padding: 0.1rpx;
+  width: 70%;
+  height: 100%;
+}
+.content .content-item .content-right .phonename{
+  font-size: 30rpx;
+  margin-top: 30rpx;
+}
+.content .content-item .content-right .number{
+  font-size: 25rpx;
+  margin-top: 20rpx;
+}
+
+.content .content-item .content-right .isluck{
+  text-align: center;
+  width: 29%;
+  font-size: 30rpx;
+  line-height: 170rpx;
+  float: right;
+  height: 170rpx;
+}

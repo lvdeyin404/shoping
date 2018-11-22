@@ -1,0 +1,43 @@
+<!--pages/cart/cart.wxml 购物车-->
+<view class='container'>
+  <view class='cart-item' wx:for="{{items}}" >
+    <view class='bus-title'>
+        <icon wx:if="{{item.selected}}" type='success_circle' size='20' bindtap='bindSelectedDp' data-index="{{index}}" data-issub="no" />
+        <icon wx:else type='circle' size='20' bindtap='bindSelectedDp' data-index="{{index}}" data-issub="no" />
+        <span class="iconfont icon-shangjia tb"></span>
+        <text>{{item.bus}}</text>
+        <span class="jiantou"> > </span>
+    </view>
+    <block wx:for="{{item.value}}" wx:for-item="vo" wx:for-index="ind">
+      <view class='goods-item'>
+        <icon wx:if="{{vo.selected}}" type='success_circle' size='20' bindtap='bindCheckbox' data-subindex="{{ind}}" data-index="{{index}}" />
+        <icon wx:else type='circle' size='20' bindtap='bindCheckbox' data-subindex="{{ind}}" data-index="{{index}}" />
+        <view class='goods-item-left'>
+          <image src='{{vo.path}}' style='height:100%;width:100%'/>
+        </view>
+        <view class='goods-item-right'>
+          <span>{{vo.value}}</span>
+          <span class="price">￥<text>{{vo.price}}</text></span>
+          <view class='size'>黑色 50寸</view>
+          <view class='number'>
+              <button style='border-right:solid 1rpx #EAEAEA' bindtap='bindreduce' data-subindex="{{ind}}" data-index="{{index}}">-</button>
+              <span>{{vo.number}}</span>
+              <button bindtap='bindincr' data-subindex="{{ind}}" data-index="{{index}}">+</button>
+          </view>
+          <span class="iconfont icon-shanchu del" bindtap="binddel" data-subindex="{{ind}}" data-index="{{index}}"></span>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 去结算 -->
+  <view class='all-price'>
+    <icon wx:if="{{seletedAllstatus}}" type='success_circle' bindtap='bindSelectedAll'></icon>
+    <icon wx:else type='circle' bindtap='bindSelectedAll'></icon>
+    <span class="selectedAll">全选</span>
+    <view>去结算</view>
+    <span class="and">合计:
+      <span class="price">￥<text>{{addPrice}}</text></span>
+    </span>
+  </view>
+</view>

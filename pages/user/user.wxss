@@ -1,0 +1,274 @@
+/* pages/user/user.wxss */
+body html{
+  height: 100%;
+  width: 100%;
+}
+
+.box{
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #F7F7F7;
+}
+
+/* 头部 */
+.banner{
+  padding: 0.1rpx;
+  width: 100%;
+  height: 200px;
+  background: url('http://119.29.242.21/images/user.png') no-repeat;
+}
+.banner .user{
+  margin-top: 20rpx;
+  width: 100%;
+  height: 77px;
+  /* background: red; */
+}
+.banner .user .image{
+  border-radius: 100%;
+  margin-left: 40%;
+  float: left;
+  height: 100%;
+  width: 77px;
+}
+.banner .user .image image{
+  border-radius: 100%;
+  height: 100%;
+  width: 100%;
+}
+.banner .user .message{
+  position: relative;
+  color: #ffffff;
+  margin-left: 28%;
+  font-size: 50rpx;
+}
+.banner .user .message .dian{
+  position: absolute;
+  top: 0;
+  left: 70%;
+  /* display: block; */
+  height: 20rpx;
+  width: 20rpx;
+  background: #FF5757;
+  border-radius: 100%;
+}
+
+.banner .name{
+  text-align: center;
+  margin-top: 20rpx;
+  height: 50rpx;
+  width: 100%;
+  color: #ffffff;
+}
+
+.banner .name2{
+  text-align: center;
+  margin-top: 20rpx;
+  line-height: 50rpx;
+  height: 50rpx;
+  width: 30%;
+  padding: 0;
+  color: #3A1C1A;
+}
+
+.banner .member{
+  line-height: 40rpx;
+  font-size: 24rpx;
+  color: #ffffff;
+  border-radius: 20px;
+  background: #3A1C1A;
+  text-align: center;
+  margin-left: 40%;
+  margin-top: 20rpx;
+  width: 20%;
+  height: 40rpx;
+}
+
+/* 订单状态模块 */
+.order{
+  position: relative;
+  height: 300rpx;
+  width: 100%;
+  background: #ffffff;
+}
+.order .waitpay{
+  margin-top: 140rpx;
+  margin-left: 4%;
+  float: left;
+  height: auto;
+  width: 20%;
+}
+.order .waitpay view{
+  margin-top: 10rpx;
+  text-align: center;
+  font-size: 60rpx;
+}
+.order .waitpay span{
+  margin-top: 10rpx;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+.order .waitgoods{
+  margin-top: 140rpx;
+  margin-left: 4%;
+  float: left;
+  height: auto;
+  width: 20%;
+}
+.order .waitgoods view{
+  margin-top: 10rpx;
+  text-align: center;
+  font-size: 60rpx;
+}
+.order .waitgoods span{
+  margin-top: 10rpx;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+.order .waitevaluate{
+  margin-top: 140rpx;
+  margin-left: 4%;
+  float: left;
+  height: auto;
+  width: 20%;
+}
+.order .waitevaluate view{
+  margin-top: 10rpx;
+  text-align: center;
+  font-size: 60rpx;
+}
+.order .waitevaluate span{
+  margin-top: 10rpx;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+.order .allorder{
+  border-left: 1rpx solid #DDDDDD;
+  margin-top: 140rpx;
+  margin-left: 2%;
+  padding-left: 2%;
+  float: left;
+  height: auto;
+  width: 20%;
+}
+.order .allorder view{
+  margin-top: 10rpx;
+  text-align: center;
+  font-size: 60rpx;
+}
+.order .allorder span{
+  margin-top: 10rpx;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 30rpx;
+}
+/* 余额栏  定位 */
+.order  .balance{
+  box-shadow: 0 5px 5px #DFDFDF;
+  border-radius: 8px;
+  position: absolute;
+  top: -25%;
+  left: 5%;
+  height: 150rpx;
+  width: 90%;
+  background: #ffffff;
+}
+.order .balance .balance-items{
+  font-size: 30rpx;
+  margin-top: 5%;
+  text-align: center;
+  margin-left: 10%;
+  height: 100rpx;
+  width: 20%;
+  float: left;
+}
+
+/* 中间部分 */
+.middle{
+  margin-top: 30rpx;
+  height: 200rpx;
+}
+.middle .jt{
+  display: inline-block;
+  float: right;
+  margin-right: 30rpx;
+}
+.middle .myluck{
+  height: 100rpx;
+  width: 100%;
+  line-height: 100rpx;
+  background: #ffffff;
+}
+.middle .myluck .liwu{
+  font-size: 40rpx;
+  color: #F6989F;
+  margin: 0 25rpx;
+}
+.middle .myluck .luckfont{
+  font-size: 35rpx;
+}
+
+.middle .sc{
+  height: 100rpx;
+  line-height: 80rpx;
+  width: 100%;
+  background: #ffffff;
+}
+.middle .sc .star{
+  font-size: 40rpx;
+  color: #DECE91;
+  margin: 0 25rpx;
+}
+.middle .sc .scfont{
+  font-size: 35rpx;
+}
+
+/* 底部 */
+.bottom{
+  margin-top: 30rpx;
+  height: 200rpx;
+}
+.bottom .jt{
+  display: inline-block;
+  float: right;
+  margin-right: 30rpx;
+}
+.bottom .haveprize{
+  height: 100rpx;
+  width: 100%;
+  line-height: 100rpx;
+  background: #ffffff;
+}
+.bottom .haveprize .zf{
+  font-size: 40rpx;
+  color: #F6989F;
+  margin: 0 25rpx;
+}
+.bottom .haveprize .haveprizefont{
+  font-size: 35rpx;
+}
+
+.bottom .problem{
+  height: 100rpx;
+  line-height: 80rpx;
+  width: 100%;
+  background: #ffffff;
+}
+.bottom .problem .wq{
+  font-size: 40rpx;
+  color: #DECE91;
+  margin: 0 25rpx;
+}
+.bottom .problem .problemfont{
+  font-size: 35rpx;
+}

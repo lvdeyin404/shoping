@@ -1,0 +1,29 @@
+/* pages/list/newluck/newluck.wxss */
+html body{
+  height: 100%;
+  width: 100%;
+}
+
+.box{
+  height: 100%;
+  width: 100%;
+  background: #EAEAEA;
+}
+
+.content{
+  padding: 0.1rpx;
+  height: 100%;
+  width: 100%;
+}
+.content .content-item{
+  font-size: 30rpx;
+  padding-left: 10rpx;
+  border-radius: 5px;
+  height: auto;
+  width: 95%;
+  margin: 10rpx auto;
+  background: #ffffff;
+}
+.content .content-item text{
+  color: #F9B15E;
+}

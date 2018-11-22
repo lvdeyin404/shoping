@@ -1,0 +1,90 @@
+<!--pages/user/user.wxml  用户中心-->
+<view class='box'>
+  <!-- 登录信息展示 -->
+  <view class='banner' wx:if='{{hasUserInfo}}'>
+    <view class='user'>
+      <span class='image'>
+        <image src='{{userInfo.avatarUrl}}' />
+      </span>
+      <span class='iconfont icon-duihuaxinxi message'>
+        <span class='dian'></span>
+      </span>
+    </view>
+    <view class='name'>{{userInfo.nickName}}</view>
+    <view class='member'>普通会员</view>
+  </view>
+
+  <view class='banner' wx:else>
+    <view class='user'>
+      <span class='image'>
+        <image src='../../img/user.jpg' />
+      </span>
+      <span class='iconfont icon-duihuaxinxi message'>
+        <span class='dian'></span>
+      </span>
+    </view>
+    <button class='name2' open-type='getUserInfo' bindgetuserinfo='getUserInfo'>点击登录</button>
+    <view class='member'>无</view>
+  </view>
+
+  <!-- 订单状态栏 -->
+  <view class='order'>
+    <view class='waitpay'>
+      <view class='iconfont icon-qingdan'></view>
+      <span>待付款</span>
+    </view>
+    <view class='waitgoods'>
+      <view class='iconfont icon-wuliu'></view>
+      <span>待收货</span>
+    </view>
+    <view class='waitevaluate'>
+      <view class='iconfont icon-pinglun'></view>
+      <span>待评价</span>
+    </view>
+    <view class='allorder'>
+      <view class='iconfont icon-gongdan'></view>
+      <span>全部订单</span>
+    </view>
+
+    <!-- 余额栏  绝对定位 -->
+    <view class='balance'>
+      <view class='balance-items'>
+        <view>100</view>
+        <view>幸运币</view>
+      </view>
+      <view class='balance-items'>
+        <view>10</view>
+        <view>钻石</view>
+      </view>
+      <view class='balance-items'>
+        <view>100.00</view>
+        <view>余额</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='middle'>
+    <view class='myluck'>
+      <span class='iconfont icon-liwu liwu'></span>
+      <span class='luckfont'>我的抽奖</span>
+      <span class='jt'> > </span>
+    </view>
+    <view class='sc'>
+      <span class='iconfont icon-jiaxingshoucang star'></span>
+      <span class='scfont'>收藏</span>
+      <span class='jt'> > </span>
+    </view>
+  </view>
+  <view class='bottom'>
+    <view class='haveprize'>
+      <span class='iconfont icon-liwu zf'></span>
+      <span class='haveprizefont'>邀请有奖</span>
+      <span class='jt'> > </span>
+    </view>
+    <view class='problem'>
+      <span class='iconfont icon-jiaxingshoucang wq'></span>
+      <span class='problemfont'>帮助.反馈</span>
+      <span class='jt'> > </span>
+    </view>
+  </view>
+</view>

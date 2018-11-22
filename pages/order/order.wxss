@@ -1,0 +1,199 @@
+/* pages/order/order.wxss */
+htmp body{
+  height: 100%;
+  width: 100%;
+}
+
+.box{
+  height: 800rpx;
+  background: #EAEAEA;
+}
+.userinfo{
+  position: relative;
+  padding: 35rpx 0;
+  height: auto;
+  width: 100%;
+  background: #ffffff;
+}
+.userinfo .name_phone{
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 35rpx;
+  margin-left: 50rpx;
+}
+.userinfo .name_phone span{
+  margin-left: 20rpx;
+}
+.userinfo .name_phone .bage{
+  border-radius: 5px;
+  position: relative;
+  top: -5rpx;
+  font-size: 20rpx;
+  border: solid 2rpx #D0AF7C;
+  padding: 5rpx 10rpx;
+  color: #D0AF7C;
+}
+.userinfo .address{
+  color: #969696;
+  font-size: 28rpx;
+ 
+  width: 100%;
+}
+.userinfo .address span{
+  float:  left;
+  position: relative;
+  top: -10rpx;
+  height: 30rpx;
+  width: 30rpx;
+  margin-left: 25rpx;
+  margin-right: 20rpx;
+}
+.userinfo .address span image{
+  height: 50rpx;
+  width: 50rpx;
+}
+.userinfo .jiantou{
+  color: #969696;
+  position: absolute;
+  top: 33%;
+  left: 92%;
+}
+
+.goods{
+  font-size: 30rpx;
+  position: relative;
+  margin-top: 20rpx;
+  height: 150rpx;
+  width: 100%;
+  background: #ffffff;
+  padding: 20rpx;
+}
+.goods .imgs{
+  margin-left: 20rpx;
+}
+.goods .imgs image{
+  height: 150rpx;
+  width: 150rpx;
+}
+.goods .number{
+  position: absolute;
+  top: 38%;
+  left: 80%;
+}
+.goods .jiantou{
+  position: absolute;
+  top: 38%;
+  left: 90%;
+}
+
+.goods_price{
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  height: auto;
+  width: 100%;
+  padding: 10rpx 20rpx 20rpx 20rpx;
+  background: #ffffff;
+  position: relative;
+}
+.goods_price view{
+  width: 100%;
+  margin-top: 20rpx;
+}
+.goods_price view text{
+  text-align: right;
+  width: 200rpx;
+  position: absolute;
+  left: 65%;
+}
+
+/* 支付方式 */
+.pay-title{
+  font-weight: 600;
+  font-size: 35rpx;
+  margin-top: 20rpx;
+  background: #ffffff;
+  height: auto;
+  width: 100%;
+  border-bottom: solid 1rpx #EAEAEA;
+  padding: 20rpx;
+}
+.pay{
+  padding: 20rpx;
+  background: #ffffff;
+  height: auto;
+  width: 100%;
+}
+.pay-item{
+  margin-top: 20rpx;
+  position: relative;
+  font-size: 30rpx;
+  height: 35px;
+  width: 100%;
+}
+.pay-item .pay-name{
+  position: relative;
+  float: left;
+}
+.pay-item .pay-name image{
+  height: 35px;
+  width: 35px;
+}
+.pay-item .pay-name text{
+  width: 120rpx;
+  position: absolute;
+  top: 20rpx;
+  left: 80rpx;
+}
+.pay-item .pay-name .tj{
+  border-radius: 5px;
+  text-align: center;
+  font-size: 25rpx;
+  border: solid 3rpx #D0AF7C;
+  color: #D0AF7C;
+  padding: 3rpx 3rpx 3rpx 3rpx;
+  width: 100%;
+  position: absolute;
+  top: 20rpx;
+  left: 220rpx;
+}
+.pay-item .pay-select{
+  float: right;
+}
+.pay-item .pay-select{
+  margin-top: 15rpx;
+  margin-right: 30rpx;
+  height: 35rpx;
+}
+
+/* 底部去付款 */
+.footer{
+  position: fixed;
+  bottom: 0;
+  height: 100rpx;
+  width: 100%;
+  background: #ffffff;
+}
+.footer .footer-left{
+  font-size: 30rpx;
+  float: left;
+  width: 60%;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.footer .footer-left span{
+  margin-left: 20rpx;
+}
+.footer .footer-left text{
+  margin-left: 10rpx;
+}
+.footer .gopay{
+  width: 40%;
+  float: left;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background: #D0AF7C;
+  color: #ffffff;
+}
+
+
